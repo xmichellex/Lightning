@@ -1,4 +1,4 @@
-int startX = (int)(Math.random()*400); 
+int startX = mouseX; 
 int startY = 0;
 int endX = 200; 
 int endY = 0;
@@ -8,9 +8,9 @@ int endY = 0;
 void setup()
 {
   size(400,400);
+  background(0, 0, 0);
   strokeWeight(1);
-  background(0, 0, 0); 
-  frameRate(10);
+
 }
 void draw()
 {
@@ -26,29 +26,15 @@ while(endY < 400) {
 	startX=endX;
 	startY=endY;
 }
-background(0,0,0);
 
-if (endY > 400) {
 
-	int startX = (int)(Math.random()*400); 
-	int startY = 0;
-	int endX = 200; 
-	int endY = 0;
-	while(endY < 400) {
-	stroke(colorX, colorY, colorZ);
-	endX = startX + (int)(Math.random() * 18)-9;
-	endY = startY + (int)(Math.random() * 9);
-	line(startX, startY, endX, endY);
-	startX=endX;
-	startY=endY;
+
 
 clouds();
 	
 
 
 
-}
-}
 }
 
 void clouds() {
@@ -67,16 +53,11 @@ ellipse(400, 20, 150, 150);
 
 }
 
-
-
-
-
-
-
 void mousePressed() {
-
-background(256, 256, 256); 
-
-
+background(0, 0, 0);
+startX = mouseX;
+startY = 0;
+endX = 200; 
+endY = 0;
 
 }
